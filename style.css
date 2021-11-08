@@ -1,0 +1,191 @@
+/* Basic reset */
+
+/* 
+- Mobile: 375px
+- Desktop: 1440px
+
+
+- Family: [Red Hat Display](https://fonts.google.com/specimen/Red+Hat+Display)
+- Weights: 500, 700, 900  */
+
+:root {
+  /* primary */
+  ---Pale-blue: hsl(225, 100%, 94%);
+  --Bright-blue: hsl(245, 75%, 52%);
+
+  /* neutral */
+  --Very-pale-blue: hsl(225, 100%, 98%);
+  --Desaturated-blue: hsl(224, 23%, 55%);
+  --Dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%; /*1rem = 10px*/
+  box-sizing: border-box;
+}
+
+body {
+  font-weight: 500;
+  font-size: 1.6rem;
+  background-color: var(---Pale-blue);
+  font-family: "Red Hat Display", sans-serif;
+  color: #777;
+}
+
+.container {
+  background-image: url(./images/pattern-background-desktop.svg);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-color: var(--Very-pale-blue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 3rem;
+  height: 60rem;
+  width: 40rem;
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+
+.card-hero,
+.hero-image {
+  width: 100%;
+  max-width: 100%;
+}
+
+.card-title {
+  font-weight: 700;
+  margin-top: -4rem;
+}
+
+.card-paragraph {
+  text-align: center;
+  margin: -4rem 3rem;
+}
+
+.card-plan {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 3rem;
+  padding: 1.5rem;
+  background: var(---Pale-blue);
+  width: 80%;
+  border-radius: 1rem;
+}
+
+.card-plan-image-box {
+  text-align: center;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  background-color: hsla(249, 40%, 60%, 0.2);
+  position: relative;
+}
+
+.music-icon {
+  height: 2.5rem;
+}
+
+.card-plan-text {
+  display: flex;
+  flex-direction: column;
+  margin-left: -7rem;
+}
+
+.card-plan-text-main {
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 0.6rem;
+}
+
+.card-plan-btn:hover {
+  color: hsla(249, 40%, 60%, 0.788);
+}
+
+.card-cta-1,
+.card-cta-1:link,
+.card-cta-1:active {
+  text-align: center;
+  display: inline-block;
+  color: #fff;
+  margin-top: -3rem;
+  width: 80%;
+  text-decoration: none;
+  background-color: var(--Bright-blue);
+  padding: 1.2rem;
+  border-radius: 1rem;
+  transition: all 0.2s;
+}
+.card-cta-1:hover {
+  background-color: hsla(249, 40%, 60%, 0.788);
+  box-shadow: 0rem 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.card-cta-2,
+.card-cta-2:link,
+.card-cta-2:active {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  margin-bottom: 4rem;
+  transition: all 0.2s;
+  color: hsla(249, 40%, 60%, 0.788);
+  transition: all 0.2s;
+}
+
+.card-cta-2:hover {
+  font-weight: 500;
+  color: #000;
+}
+
+@media screen and (max-width: 400px) {
+  body {
+    font-size: 1.4rem;
+  }
+
+  .container {
+    background-image: url(./images/pattern-background-mobile.svg);
+  }
+
+  .card {
+    height: 50rem;
+    width: 30rem;
+  }
+
+  .card-plan-text {
+    margin-left: 1rem;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  body {
+    font-size: 1.2rem;
+  }
+
+  .card {
+    height: 45rem;
+    width: 28rem;
+  }
+
+  .card-plan-text {
+    margin-left: 1rem;
+  }
+}
